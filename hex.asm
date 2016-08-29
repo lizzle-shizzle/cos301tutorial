@@ -102,7 +102,6 @@ _start:
 		xor		rdi, rdi
 		syscall
 
-		jmp output
 
 	output: 
 		mov rax, 1
