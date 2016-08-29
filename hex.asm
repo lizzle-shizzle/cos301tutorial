@@ -97,10 +97,11 @@ _start:
 	
 	
 	mov		rax, 60
+	xor			rdi, rdi
+	syscall
+	
 	mov rax, 1
 	mov rdi, 1
 	mov rsi, nl
 	mov rdx, 1
-	syscall
-	xor			rdi, rdi
 	syscall
