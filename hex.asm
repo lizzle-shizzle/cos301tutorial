@@ -97,6 +97,8 @@ _start:
 		mov		rsi, res
 		mov		rdx, 2
 		syscall
+		
+		jmp		output
 
 		mov		rax, 60
 		xor		rdi, rdi
