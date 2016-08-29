@@ -6,6 +6,7 @@ res 	resq		1
 	segment	.data
 el	db	 		10
 cr	db			13
+nl  	dq			0x0a
 	segment	.text
 global _start
 
@@ -92,6 +93,12 @@ _start:
 	mov		rdi, 1
 	mov		rsi, res
 	mov		rdx, 2
+	syscall
+	
+	mov rax, 1
+	mov rdi, 1
+	mov rsi, nl
+	mov rdx, 1
 	syscall
 	
 	mov		rax, 60
