@@ -12,6 +12,8 @@ mult	dd			42
 plus	dd			43
 subt	dd			45
 divi		dd			47
+off		dq			48
+opAns		dq			0
 
 		segment	.text
 global _start
@@ -63,6 +65,23 @@ _start:
 		jz			ifdivi
 		
 		ifmult:
+			mov		rax,[off]
+			sub		[opOne],rax
+			sub		[opTwo],rax
+			syscall
+			
+			mov		rax,[opOne]
+			imul	rax,[opTwo]
+			mov		[opAns],rax
+			mov		rax,[off]
+			add		[opAns],rax
+			syscall
+			
+			mov		rax,1
+			mov		rdi,1
+			mov		rsi,opAns
+			mov		rdx,1
+			syscall
 			jmp	endOp
 			
 		ifplus:
