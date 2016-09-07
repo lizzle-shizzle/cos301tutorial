@@ -214,7 +214,7 @@ terminate:
 	mov eax, 1
 	mov edi, 1
 	mov edx, 5;Number of characters to be stored
-	lea rsi, "ERROR"
+	mov rsi, "ERROR"
 	syscall
 
 	mov rax,1
