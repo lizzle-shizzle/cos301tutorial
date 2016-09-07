@@ -210,7 +210,13 @@ print:
 	mov rsi,var
 	syscall
 
-terminate:	
+terminate:
+	mov eax, 1
+	mov edi, 1
+	mov edx, 5;Number of characters to be stored
+	lea rsi, "ERROR"
+	syscall
+
 	mov rax,1
 	mov rdi,1
 	mov rdx,1
