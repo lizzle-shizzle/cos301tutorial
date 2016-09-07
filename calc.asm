@@ -211,16 +211,10 @@ print:
 	syscall
 
 terminate:
-	mov eax, 1
-	mov edi, 1
-	mov edx, 5;Number of characters to be stored
-	mov rsi, "ERROR"
-	syscall
-
 	mov rax,1
 	mov rdi,1
-	mov rdx,1
-	mov rsi,newline
+	mov rdx,5
+	mov rsi,"ERROR"
 	syscall
 	
 	xor eax,eax
