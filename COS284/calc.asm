@@ -20,7 +20,7 @@ global _start
 _start:
 
 	xor r8,r8
-	mov r9,7
+	mov r9,6
 	mov r10,10
 	xor r15,r15
 
@@ -72,7 +72,7 @@ savefirst:
 	
 	mov [value1],r15
 	
-	mov r9,7
+	mov r9,6
 	xor r15,r15
 	
 	jmp getSign
@@ -104,7 +104,7 @@ negative:
 	mov rdx,1
 	mov rsi,minus
 	syscall
-	mov r14,15
+	mov r14,12
 	
 	jmp toDec
 
@@ -154,7 +154,7 @@ positive:
 	mov rdx,1
 	mov rsi,plus
 	syscall
-	mov r14,15 
+	mov r14,12
 	
 toDec:
 	cmp r14,0
