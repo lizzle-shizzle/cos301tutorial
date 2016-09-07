@@ -17,7 +17,6 @@ off		dq			48
 		segment	.text
 global _start
 _start:
-		mov		[opAns], 0
 		mov		rax, 0
 		mov		rdi, 0
 		mov		rsi, opOne
