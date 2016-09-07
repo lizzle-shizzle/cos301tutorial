@@ -13,11 +13,11 @@ plus	dd			43
 subt	dd			45
 divi		dd			47
 off		dq			48
-opAns		dq			0
 
 		segment	.text
 global _start
 _start:
+		mov		opAns, 0
 		mov		rax, 0
 		mov		rdi, 0
 		mov		rsi, opOne
